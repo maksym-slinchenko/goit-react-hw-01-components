@@ -1,0 +1,15 @@
+.statistics {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 2px rgba(76, 76, 77, 0.2);
+}
+.stat_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+.title {
+  padding-top: 15px;
+  margin-top: 0;
+}
