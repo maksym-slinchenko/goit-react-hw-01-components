@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import s from './user.module.css';
+import s from './profile.module.css';
 
-const User = ({ avatar, name, tag, location, stats }) => {
+const Profile = ({ avatar, name, tag, location, stats }) => {
   const { followers = 0, views = 0, likes = 0 } = stats;
   return (
     <div className="container">
@@ -31,25 +31,11 @@ const User = ({ avatar, name, tag, location, stats }) => {
   );
 };
 
-User.propTypes = {
+Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
 };
-export default User;
-
-// const Button = ({ type = 'button', label, disabled }) => {
-//   const btnClasses = [styles.button];
-
-//   if (disabled) {
-//     btnClasses.push(styles.disabled);
-//   }
-
-//   return (
-//     <button className={btnClasses.join(' ')} type={type} disabled={disabled}>
-//       {label}
-//     </button>
-//   );
-// };
+export default Profile;
