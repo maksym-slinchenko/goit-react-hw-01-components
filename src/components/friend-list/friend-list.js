@@ -1,9 +1,20 @@
 import PropTypes from 'prop-types';
+import friendList from './friend-list.json';
+import FriendListItem from '../friend-list-item/friend-list-item';
 
-const FriendList = ({ friends }) => {
+const FriendList = () => {
   return (
     <div className="container">
-      <ul className="friend-list">{friends}</ul>
+      <ul className="friend-list">
+        {friendList.map(friend => (
+          <FriendListItem
+            key={friend.id}
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+          />
+        ))}
+      </ul>
     </div>
   );
 };
